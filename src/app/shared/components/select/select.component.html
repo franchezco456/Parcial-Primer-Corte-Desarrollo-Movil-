@@ -1,0 +1,5 @@
+<ion-select  [label]='label' label-placement="floating" fill="outline" interface="popover" [multiple]='multiple'>  
+  @for (op of options; track options) {
+      <ion-select-option [value]="op">{{ op }}</ion-select-option>
+      }
+</ion-select>

@@ -1,2 +1,22 @@
-<ion-content [fullscreen]="true">
+<ion-content class="flex-center" [fullscreen]="true">
+    <ion-grid >
+        <ion-row>
+            <ion-col>
+                <app-card imgSrc="assets/images/NewsLogo.jpg">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col>
+                                <app-input label="Email" type="email" placeholder="Enter Email"></app-input>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col>
+                                <app-input label="Password" type="password" placeholder="Enter Password"></app-input>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </app-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
