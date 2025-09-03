@@ -2,20 +2,27 @@
     <ion-grid >
         <ion-row>
             <ion-col>
-                <app-card imgSrc="assets/images/NewsLogo.jpg">
+                <form [formGroup]="loginForm" (ngSubmit)="doLogin()">
+                    <app-card imgSrc="assets/images/NewsLogo.jpg">
                     <ion-grid>
                         <ion-row>
                             <ion-col>
-                                <app-input label="Email" type="email" placeholder="Enter Email"></app-input>
+                                <app-input label="Email" type="email" placeholder="Enter Email" [control]="email"></app-input>
                             </ion-col>
                         </ion-row>
                         <ion-row>
                             <ion-col>
-                                <app-input label="Password" type="password" placeholder="Enter Password"></app-input>
+                                <app-input label="Password" type="password" placeholder="Enter Password" [control] = "password"></app-input>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col>
+                                <app-button type="submit" label="Log In" [disabled]="loginForm.invalid"></app-button>
                             </ion-col>
                         </ion-row>
                     </ion-grid>
-                </app-card>
+                    </app-card>
+                </form>
             </ion-col>
         </ion-row>
     </ion-grid>
