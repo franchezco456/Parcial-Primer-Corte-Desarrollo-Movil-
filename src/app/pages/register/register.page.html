@@ -35,7 +35,10 @@
           </ion-row>
           <ion-row>
             <ion-col>
-              <app-button label="Registrarse" type = "submit" [disabled]="registerForm.invalid"></app-button>
+              <app-button label="Register" type = "submit" [disabled]="registerForm.invalid"></app-button>
+            </ion-col>
+            <ion-col>
+              <app-button label="go to login" type = "button" [disabled]="false" (click)="goLogin()"></app-button>
             </ion-col>
           </ion-row>
         </ion-grid>

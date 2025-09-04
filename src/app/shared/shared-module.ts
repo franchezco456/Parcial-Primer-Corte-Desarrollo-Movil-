@@ -10,9 +10,11 @@ import { User } from './services/user/user';
 import { Uuid } from './providers/uuid/uuid';
 import { Storage } from './providers/storage/storage';
 import { LinkComponent } from './components/link/link.component';
+import { Toast } from './providers/toast/toast';
+import { Encrypt } from './providers/encrypt/encrypt';
 
 const services = [User];
-const providers = [Storage, Uuid];
+const providers = [Storage, Uuid,Toast,Encrypt];
 
 @NgModule({
   declarations: [InputComponent, CardComponent,SelectComponent, ButtonComponent, LinkComponent],

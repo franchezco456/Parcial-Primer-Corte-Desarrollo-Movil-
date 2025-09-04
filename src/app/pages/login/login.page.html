@@ -19,6 +19,9 @@
                             <ion-col>
                                 <app-button type="submit" label="Log In" [disabled]="loginForm.invalid"></app-button>
                             </ion-col>
+                            <ion-col>
+                                <app-button type="button" label="register" [disabled]="false" (click)="goToRegister()"></app-button>
+                            </ion-col>
                         </ion-row>
                     </ion-grid>
                     </app-card>

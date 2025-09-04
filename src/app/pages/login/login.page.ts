@@ -22,9 +22,15 @@ export class LoginPage implements OnInit {
   public doLogin(){
     console.log(this.loginForm.value);
     const user = this.userSrv.login(this.loginForm.value);
+    if (user){
     this.storageSrv.set('AUTH', JSON.stringify({uuid:user.uuid}));
     this.loginForm.reset();
     this.router.navigate(['/home']);
+    }
+    this.loginForm.reset();
+  }
+  public goToRegister() {
+  this.router.navigate(['/register']);
   }
 
   ngOnInit() {}
