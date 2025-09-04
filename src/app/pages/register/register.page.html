@@ -1,0 +1,47 @@
+<ion-content class= "flex-center"[fullscreen]="true">
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <form [formGroup]="registerForm" (ngSubmit)="doRegister()">
+        <app-card>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <app-input label="Name" placeholder="Enter name" type="text" [control]="name"></app-input>
+            </ion-col>
+            <ion-col>
+              <app-input label="LastName" placeholder="Enter LastName" type="text" [control] = "lastname"></app-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <app-select label="Country" [multiple]=false [options]="['hola', 'hola 2']" [control] = "country"></app-select>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <app-input label="Email" placeholder="Enter email" type="text" [control] = "email"></app-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <app-input label="Password" placeholder="Enter Password" type="password" [control] = "password"></app-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <app-input label="Confirm Password" placeholder="Confirm Password" type="password" [control] = "Cpassword"></app-input>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <app-button label="Registrarse" type = "submit" [disabled]="registerForm.invalid"></app-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </app-card>
+      </form>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

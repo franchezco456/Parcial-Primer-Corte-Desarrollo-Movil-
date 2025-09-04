@@ -1,5 +1,4 @@
-<ion-select  [label]='label' label-placement="floating" fill="outline" interface="popover" [multiple]='multiple'>  
-  @for (op of options; track options) {
-      <ion-select-option [value]="op">{{ op }}</ion-select-option>
-      }
+<ion-select [label]="label" label-placement="floating" fill="solid" interface="popover" [multiple]="multiple" [value]="control.value"
+  (ionChange)="doSelect($event)">
+  <ion-select-option *ngFor="let op of options" [value]="op">{{ op }}</ion-select-option>
 </ion-select>
