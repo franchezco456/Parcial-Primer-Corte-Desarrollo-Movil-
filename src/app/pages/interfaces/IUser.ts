@@ -6,6 +6,8 @@ export interface IUser {
     password: string;
 }
 
-export interface IUserCreate extends Omit<IUser, 'uuid'>{}
+export interface IUserCreate extends Omit<IUser, 'uuid'>{
+    Cpassword : string;
+}
 
 export interface IUserLogin extends Omit<IUser, 'uuid'|'name'|'lastname'>{}

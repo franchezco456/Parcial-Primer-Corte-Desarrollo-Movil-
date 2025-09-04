@@ -22,10 +22,11 @@ export class RegisterPage implements OnInit {
     }
     public doRegister(){
       console.log(this.registerForm.value);
-      this.userSrv.register(this.registerForm.value);
-      this.registerForm.reset();
-      this.router.navigate(['/login']);
-      
+      if(this.userSrv.register(this.registerForm.value)){
+        this.registerForm.reset();
+        this.router.navigate(['/login']);
+      }
+        this.registerForm.reset();
     }
 
     public goLogin(){
@@ -40,7 +41,7 @@ export class RegisterPage implements OnInit {
       this.email = new FormControl('', [Validators.required, Validators.email]);
       this.password = new FormControl('', [Validators.required, Validators.minLength(3)]);
       this.Cpassword = new FormControl ('', [Validators.required, Validators.minLength(3)]);
-
+      
       this.registerForm = new FormGroup({
         name: this.name,
         lastname: this.lastname,
@@ -48,7 +49,7 @@ export class RegisterPage implements OnInit {
         country: this.country,
         password: this.password,
         Cpassword: this.Cpassword
-      })
+      });
     }
-
 }
+
