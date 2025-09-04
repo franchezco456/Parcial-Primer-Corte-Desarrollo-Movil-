@@ -9,14 +9,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { User } from './services/user/user';
 import { Uuid } from './providers/uuid/uuid';
 import { Storage } from './providers/storage/storage';
+import { LinkComponent } from './components/link/link.component';
 
 const services = [User];
 const providers = [Storage, Uuid];
 
 @NgModule({
-  declarations: [InputComponent, CardComponent,SelectComponent, ButtonComponent],
+  declarations: [InputComponent, CardComponent,SelectComponent, ButtonComponent, LinkComponent],
   imports: [CommonModule,IonicModule,ReactiveFormsModule,FormsModule],
-  exports: [InputComponent, CardComponent, SelectComponent, ButtonComponent, ReactiveFormsModule, FormsModule],
+  exports: [InputComponent, CardComponent, SelectComponent, ButtonComponent, ReactiveFormsModule, FormsModule, LinkComponent],
   providers: [...services, ...providers],
 })
 export class SharedModule { }
