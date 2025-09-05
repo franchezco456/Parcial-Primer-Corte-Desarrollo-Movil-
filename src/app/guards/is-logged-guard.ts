@@ -7,7 +7,7 @@ export const isLoggedGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
   const storage = inject(Storage);
   const auth =  storage.get<{Uuid:string}>('AUTH');
-  if(router.url === '/' && auth){
+  if(router.url === '**' && !auth){
     return true;
   }
   router.navigate(['/home'])
