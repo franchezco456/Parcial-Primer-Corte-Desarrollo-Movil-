@@ -1,7 +1,7 @@
 import { CanActivateFn, Router } from '@angular/router';
 import { inject} from '@angular/core';
-import { Storage } from '../shared/providers/storage/storage';
-import { Uuid } from '../shared/providers/uuid/uuid';
+import { Storage } from 'src/app/core/providers/storage/storage';
+import { Uuid } from 'src/app/core/providers/uuid/uuid';
 
 
 export const authGuard: CanActivateFn = (route, state) => {

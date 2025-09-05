@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Storage } from '../../providers/storage/storage';
+import { Storage } from 'src/app/core/providers/storage/storage';
 import { IUser, IUserCreate, IUserLogin } from 'src/app/pages/interfaces/IUser';
-import { Uuid } from '../../providers/uuid/uuid';
-import { Toast } from '../../providers/toast/toast';
-import { Encrypt } from '../../providers/encrypt/encrypt';
+import { Uuid } from 'src/app/core/providers/uuid/uuid';
+import { Toast } from 'src/app/shared/providers/toast/toast';
+import { Encrypt } from 'src/app/core/providers/encrypt/encrypt';
 
 @Injectable({
   providedIn: 'root'
