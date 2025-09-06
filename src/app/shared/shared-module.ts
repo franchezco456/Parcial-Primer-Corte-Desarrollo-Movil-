@@ -8,6 +8,7 @@ import { SelectComponent } from './components/select/select.component';
 import { ButtonComponent } from './components/button/button.component';
 import { LinkComponent } from './components/link/link.component';
 import { Toast } from './providers/toast/toast';
+import { AppRoutingModule } from "src/app/app-routing.module";
 
 @NgModule({
   declarations: [

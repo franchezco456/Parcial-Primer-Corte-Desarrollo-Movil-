@@ -10,6 +10,7 @@ export class CardComponent  implements OnInit {
   @Input() imgSrc: string = '';
   @Input() title: string = '';
   @Input() subtitle: string = '';
+  @Input() text: string='';
   constructor() { }
   
   ngOnInit() {}

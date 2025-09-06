@@ -2,6 +2,7 @@ export interface IUser {
     uuid: string;
     name: string;
     lastname: string;
+    country:string;
     email: string;
     password: string;
 }
