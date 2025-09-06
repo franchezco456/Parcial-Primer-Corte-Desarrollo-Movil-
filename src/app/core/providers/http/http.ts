@@ -14,14 +14,14 @@ export class Http {
 
   constructor(public http: HttpClient){}
 
-  async getNews(url:string): Promise<INews>{
+  async getNews(url:string, category: string = 'general'): Promise<INews>{
     try {
       return (await lastValueFrom(
-        this.http.get<INews>(`${url}/v2/everything`, {
+        this.http.get<INews>(`${url}/v2/top-headlines`, {
           params: {
-            pageSize: 20,
+            pageSize: 100,
             sortBy: 'publishedAt',
-            q: 'recent',
+            category: category
           },
         })
       ));

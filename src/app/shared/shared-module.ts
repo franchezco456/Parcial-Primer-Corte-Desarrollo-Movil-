@@ -9,6 +9,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { LinkComponent } from './components/link/link.component';
 import { Toast } from './providers/toast/toast';
 import { AppRoutingModule } from "src/app/app-routing.module";
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AppRoutingModule } from "src/app/app-routing.module";
     SelectComponent,
     ButtonComponent,
     LinkComponent,
+    SidebarComponent
   ],
   imports: [CommonModule, IonicModule, ReactiveFormsModule, FormsModule],
   exports: [
@@ -27,6 +29,7 @@ import { AppRoutingModule } from "src/app/app-routing.module";
     ReactiveFormsModule,
     FormsModule,
     LinkComponent,
+    SidebarComponent
   ],
   providers: [Toast],
 })

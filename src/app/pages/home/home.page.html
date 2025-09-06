@@ -1,5 +1,12 @@
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true"> 
     <ion-grid>
+      <ion-row>
+        <ion-col>
+          <app-select (doSelect)="filter($event)" [options]="categories" [multiple]="false">
+
+          </app-select>
+        </ion-col>
+      </ion-row>
       @for (article of articles; track article.url;let i = $index) {
         @if (i % 2 === 0) {
       <ion-row>

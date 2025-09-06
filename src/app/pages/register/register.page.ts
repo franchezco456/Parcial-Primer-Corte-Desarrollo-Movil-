@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from 'src/app/core/services/user/user';
 import { Router } from '@angular/router';
-import { Data_Country, ICountry } from '../interfaces/Icountries';
+import { Data_Country, ICountry, castToData } from '../interfaces/Icountries';
 import { Http } from 'src/app/core/providers/http/http';
 import { environment } from 'src/environments/environment';
+import { IData } from '../interfaces/IData';
+
 
 
 @Component({
@@ -41,8 +43,11 @@ export class RegisterPage implements OnInit {
           this.countries= countriesDATA.data ;
           console.log(this.countries);
     }
-    
-
+  
+    getCountries(): IData<Data_Country['iso3']>[] {
+      return castToData(this.countries)
+    }
+  
     public goLogin(){
       this.router.navigate(['/login']);
     }
